@@ -4,11 +4,12 @@ const App = () => {
 
   const handleInput = (event) =>{
    // use console.log
+    console.log(event.target.value);
   }
 
   // do not change id of input elements
   return (
-    <div id="main">
+    <div id="main" onChange={(event) => handleInput(event)}>
       <label htmlFor='text-input'>Text Input:- </label>
       <input id="text-input" type={'text'} />
 
